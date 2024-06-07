@@ -49,8 +49,42 @@ The `dotnet nuget why` command shows the dependency graph for a particular packa
     ```dotnetcli
     dotnet nuget why .\DotnetNuGetWhyPackage.sln System.Text.Json
     ```
+    <!-- ![Example: Solution with multiple projects](media/dotnet-nuget-why/dotnet-nuget-why-solution-with-multiple-projects.png) -->
 
-    ![Example: Solution with multiple projects](media/dotnet-nuget-why/dotnet-nuget-why-solution-with-multiple-projects.png)
+    ```output
+    Project 'DotnetNuGetWhyPackage' has the following dependency graph(s) for 'System.Text.Json':
+
+        [net472]
+        │
+        ├─ Azure.Core (v1.38.0)
+        │  ├─ System.ClientModel (v1.0.0)
+        │  │  ├─ System.Memory.Data (v1.0.2)
+        │  │  │  └─ System.Text.Json (v8.0.3)
+        │  │  └─ System.Text.Json (v8.0.3)
+        │  ├─ System.Memory.Data (v1.0.2)
+        │  │  └─ System.Text.Json (v8.0.3)
+        │  └─ System.Text.Json (v8.0.3)
+        └─ System.Text.Json (v8.0.3)
+
+        [net6.0]
+        │
+        └─ System.Text.Json (v8.0.3)
+
+    Project 'DNWhyDuplicateTreesProject' has the following dependency graph(s) for 'System.Text.Json':
+
+        [net472]
+        [net6.0]
+        │
+        ├─ Azure.Core (v1.38.0)
+        │  ├─ System.ClientModel (v1.0.0)
+        │  │  ├─ System.Memory.Data (v1.0.2)
+        │  │  │  └─ System.Text.Json (v8.0.3)
+        │  │  └─ System.Text.Json (v8.0.3)
+        │  ├─ System.Memory.Data (v1.0.2)
+        │  │  └─ System.Text.Json (v8.0.3)
+        │  └─ System.Text.Json (v8.0.3)
+        └─ System.Text.Json (v8.0.3)
+    ```
 
 - Show the dependency graph for the package "System.Text.Json" for a single project:
 
