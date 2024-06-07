@@ -6,7 +6,7 @@ ms.date: 05/30/2024
 ---
 # dotnet nuget why
 
-**This article applies to:** ✔️ .NET 9 SDK and later versions
+**This article applies to:** ✔️ .NET 8.0.4xx SDK and later versions
 
 ## Name
 
