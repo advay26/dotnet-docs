@@ -38,7 +38,7 @@ The `dotnet nuget why` command shows the dependency graph for a particular packa
 
 - **`-f|--framework <FRAMEWORK>`**
 
-    The target framework(s) for which dependency graphs are shown.
+    The target framework(s) for which dependency graphs are shown. You can pass multiple `--framework` options to see graphs for more than one framework.
 
 [!INCLUDE [help](../../../includes/cli-help.md)]
 
